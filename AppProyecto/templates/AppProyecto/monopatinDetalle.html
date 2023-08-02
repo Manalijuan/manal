@@ -1,0 +1,37 @@
+{% extends 'AppProyecto/home.html' %}
+{% block content %}
+<br>
+<br>
+<div class="container">
+<p><h4>{{monopatin.titulo}}</h4></p>
+{% if monopatin.imagenArticulo %}
+    <p><img src="{{monopatin.imagenArticulo.url}}" alt=""></p>
+{% endif %}
+<p>Marca: {{monopatines.marca}}</p>
+<p>Modelo: {{monopatines.modelo}}</p>
+<p>Descripción: {{monopatines.descripcion}}</p>
+<p>Año: {{monopatines.year}}</p>
+<p>Precio(US$): {{monopatines.precio}}</p>
+<p>Teléfono de Contacto: {{monopatines.telefonoContacto}}</p>
+<p>Email de Contacto: {{monopatines.emailContacto}}</p>
+</div>
+<br>
+<br>
+<div class="container">
+    <h4>Comentarios...</h4>
+    <br>
+    <div class="container">
+    {% if not monopatines.comentarios.all %}
+        No han comentado este monopatin
+    {% else %}
+        {% for comentario in monopatines.comentarios.all %}
+        <p><strong>{{comentario.nombre}}</strong></p>
+        <p>{{comentario.mensaje}}</p>
+        <p><small>{{comentario.fechaComentario}}</small></p>
+        <hr>
+        {% endfor %}
+    {% endif %}
+    <a href="{% url 'comentario' monopatines.pk %}">Agrega un Comentario</a>
+</div>
+<br>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends 'AppProyecto/home.html' %}
+{% block content %}
+<br>
+<br>
+<div class="container text-center">
+    <br>
+    <br>
+    <h1>Varios</h1>
+</div>
+<br>
+<div class="container text-center">
+    <div class="row">
+            {% for vario in varios %}
+            <div class="col-sm-6 align-items-center">
+                <div class="card-body">
+                <br>
+                
+                <br>
+                <img src="{{vario.imagenArticulo.url}}" class="" width="100px">
+                {{vario.titulo}}
+                <a href="{% url 'vario' vario.id %}"><i class="bi bi-eye"></i></a>
+                {% if user.id == vario.usuario.id %}
+                <br>
+                <a href="{% url 'vario_eliminar' vario.id %}"><i class="bi bi-trash text-danger"></i></a>
+                <a href="{% url 'vario_editar' vario.id %}"><i class="bi bi-pencil-fill"></i></a>
+                <br>
+                <br>
+                <br>
+                {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

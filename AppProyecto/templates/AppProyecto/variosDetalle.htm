@@ -1,0 +1,37 @@
+{% extends 'AppProyecto/home.html' %}
+{% block content %}
+<br>
+<br>
+<div class="container">
+<p><h4>{{vario.titulo}}</h4></p>
+{% if vario.imagenArticulo %}
+    <p><img src="{{vario.imagenArticulo.url}}" alt=""></p>
+{% endif %}
+<p>Marca: {{vario.marca}}</p>
+<p>Modelo: {{vario.modelo}}</p>
+<p>Descripción: {{vario.descripcion}}</p>
+<p>Año: {{vario.year}}</p>
+<p>Precio(US$): {{vario.precio}}</p>
+<p>Teléfono de Contacto: {{vario.telefonoContacto}}</p>
+<p>Email de Contacto: {{vario.emailContacto}}</p>
+</div>
+<br>
+<br>
+<div class="container">
+    <h4>Comentarios...</h4>
+    <br>
+    <div class="container">
+    {% if not vario.comentarios.all %}
+        No han comentado este articulo
+    {% else %}
+        {% for comentario in vario.comentarios.all %}
+        <p><strong>{{vario.nombre}}</strong></p>
+        <p>{{comentario.mensaje}}</p>
+        <p><small>{{comentario.fechaComentario}}</small></p>
+        <hr>
+        {% endfor %}
+    {% endif %}
+    <a href="{% url 'comentario' vario.pk %}">Agrega un Comentario</a>
+</div>
+<br>
+{% endblock %}
