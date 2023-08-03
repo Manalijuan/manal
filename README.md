@@ -6,3 +6,7 @@ Cada una de estas pestañas cuentan con un lista, y esta al entrar se van a enco
 Se destaca, que cada usuario, puede modificar o eliminar su publicacion, pero no asi la de los demas usuarios. 
 Tambien cuenta con una opcion para poder comentar dichas publicaciones.
 Por otro lado cada usuario puede modificar los datos de su perfil y/o contraseña.
+
+
+Video en el enlace del Drive
+https://drive.google.com/file/d/1yh-98HUzQ5FpGYhMIykR2nxYz8y9tfZF/view?usp=sharing
