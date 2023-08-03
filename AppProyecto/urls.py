@@ -41,9 +41,9 @@ urlpatterns = [
     path('listaVarios/', VariosLista.as_view(), name='varios'),
     path('variosBorrado/<int:pk>/', VariosDelete.as_view(), name='vario_eliminar'),
     path('variosEdicion/<int:pk>/', VariosUpdate.as_view(), name='vario_editar'),
-    path('monopatinDetalle/<int:pk>/comentario/', ComentarioPagina.as_view(), name='vario'),
+    path('varioDetalle/<int:pk>/comentario/', ComentarioPagina.as_view(), name='vario'),
 
-
+    path('acercaDeMi/', views.about, name='acerca_de_mi'),
 
 
 ]

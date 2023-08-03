@@ -3,18 +3,22 @@
 <br>
 <br>
 <div class="container">
-<p><h4>{{auto.titulo}}</h4></p>
-{% if auto.imagenArticulo %}
-    <p><img src="{{auto.imagenArticulo.url}}" alt=""></p>
+<p><h4>{{bicicleta.titulo}}</h4></p>
+{% if bicicleta.imagenArticulo %}
+    <p><img src="{{bicicleta.imagenArticulo.url}}" alt=""></p>
 {% endif %}
-<p>Marca: {{auto.marca}}</p>
-<p>Modelo: {{auto.modelo}}</p>
-<p>Descripción: {{auto.descripcion}}</p>
-<p>Año: {{auto.year}}</p>
-<p>Precio(US$): {{auto.precio}}</p>
-<p>Teléfono de Contacto: {{auto.telefonoContacto}}</p>
-<p>Email de Contacto: {{auto.emailContacto}}</p>
+<p>Marca: {{bicicleta.marca}}</p>
+<p>Modelo: {{bicicleta.modelo}}</p>
+<p>Descripción: {{bicicleta.descripcion}}</p>
+<p>Año: {{bicicleta.year}}</p>
+<p>Precio(US$): {{bicicleta.precio}}</p>
+<p>Teléfono de Contacto: {{bicicleta.telefonoContacto}}</p>
+<p>Email de Contacto: {{bicicleta.emailContacto}}</p>
 </div>
+<br>
+<br>
+<br>
+<br>
 <br>
 <br>
 <div class="container">
@@ -31,6 +35,10 @@
         <hr>
         {% endfor %}
     {% endif %}
+    <br>
+    <br>
+    <br>
+    <br>
     <a href="{% url 'comentario' bicicleta.pk %}">Agrega un Comentario</a>
 </div>
 <br>

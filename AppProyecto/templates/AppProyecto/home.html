@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300&family=Nunito:wght@200&family=Poppins:wght@300&family=Quattrocento&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
-    <title>Venta Online</title>
+    <title>Venta Online de vehiculos y mas!!!</title>
 </head>
 <body>
   <img src="" alt="">
@@ -44,13 +44,26 @@
                 </li>
                 <div class="container"></div>
                 <div class="container"></div>
+                <li>
+                </li>
+                <li>
+                </li>
+                <li>
+                <li class="nav-item">
+                  <a class="nav-link " href="{% url 'acerca_de_mi' %}">Conóceme</a>
+                </li>
+                
                 <div class="container"></div>
                 <div class="container"></div>
                 <div class="container"></div>
                 {% if request.user.is_authenticated %}
                 <div class="container">
+
                 <li class="nav-item">
-                  <span class="text-light"> Hola <strong>{{request.user.first_name}}</strong>!</span>
+                  <li class="nav-item"></li>
+                  <li class="nav-item"></li>
+                  <li class="nav-item"></li>
+                  <span class="text-light">Hola <strong>{{request.user.first_name}}</strong>!</span>
                 </li>
                 </div>
                 <div class="container">
@@ -79,6 +92,23 @@
           </div>    
       </div>     
   </nav>
+  <style>
+    body {
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(135deg, #bbe5ff, #9ecaf7);
+        color: #000000; /* Letras en negro claro */
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+    h2 {
+        margin-top: 40px;
+    }
+    .text-primary {
+        color: #110f0f; /* Letras en negro claro */
+        font-weight: bold;
+    }
+</style>
         {% block content %}
     <!-- Inicio -->
 <br>
@@ -87,11 +117,58 @@
 <section id="home" class="text-dark p-5 p-lg-0 pt-lg-5 text-center text-sm-start">
   <div class="container text-center">
     <div class="">
+      <head>
+        <title>Bienvenido a la Venta Online de diferes Vehiuclos y mucho mas!!!</title>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                background: linear-gradient(135deg, #bbe5ff, #97c2ee);
+                color: #000000; /* Letras en negro claro */
+                font-family: Arial, sans-serif;
+                text-align: center;
+            }
+            h2 {
+                margin-top: 40px;
+            }
+            .text-primary {
+                color: #110f0f; /* Letras en negro claro */
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
         <div>
-            <br>
-            <br>
-            <h2>Bienvenido a la <span class="text-primary">Venta Online</span></h2>
-        </div>
+          <head>
+            <title>Bienvenido a la Venta Online de diferentes Vehículos y mucho más!!!</title>
+            <style>
+                body {
+                    margin: 0;
+                    padding: 0;
+                    background: linear-gradient(135deg, #bce5ff, #1E90FF);
+                    color: #333; /* Letras en negro claro */
+                    font-family: Arial, sans-serif;
+                    text-align: center;
+                }
+                h2 {
+                    margin-top: 40px;
+                }
+                .text-primary {
+                    color: #333; /* Letras en negro claro */
+                    font-weight: bold;
+                }
+                .avatar {
+                    width: 100px; /* Ajusta el tamaño del avatar según tus necesidades */
+                    height: 100px;
+                    border-radius: 50%;
+                    margin-bottom: 20px;
+                }
+            </style>
+        </head>
+        <body>
+            <div>
+                <h2>Bienvenido a la <span class="text-primary">Venta Online de diferentes Vehículos y mucho más!!!</span></h2>
+            </div>
     </div>
 </div>
 {% endblock %}
@@ -103,7 +180,7 @@
           <div class="">
               <div class="text-center">
                   <p class="lead my-4">
-                    Queres vender diferentes articulos y/ vehiculos?
+                    Queres vender Autos, Motocicletas y hasta monopatines?
                     <a href="{% url 'nuevo' %}"><button type="submit" class="btn btn-primary">Agregalo acá</button></a>
                   </p>
               </div>

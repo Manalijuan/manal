@@ -1,17 +1,11 @@
 {% extends 'AppProyecto/home.html' %}
-
 {% block content %}
-
 <br>
 <br>
-
 {% if user.id == vario.usuario.id %}
 <div class="container">
-
-    <h4>Editar el Articulo</h4>
-    
+    <h4>Editar el Articulo</h4>   
 </div>
-
 <div class="container">
     <div class="form-group">
         <form method="post" enctype="multipart/form-data">{% csrf_token %}
@@ -25,5 +19,4 @@
 <h4>No tienes acceso a esta pagina!</h4>
 </div>
 {% endif %}
-
 {% endblock %}

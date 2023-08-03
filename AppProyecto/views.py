@@ -181,7 +181,7 @@ class MonopatinUpdate(LoginRequiredMixin, UpdateView):
     #varios 
 class VariostinDetalle(LoginRequiredMixin, DetailView):   
     model = Vendedor
-    context_object_name = 'varios'
+    context_object_name = 'vario'
     template_name = 'AppProyecto/variosDetalle.html'
 
 class VariosLista(LoginRequiredMixin, ListView):
@@ -200,7 +200,8 @@ class VariosUpdate(LoginRequiredMixin, UpdateView):
     success_url = reverse_lazy('varios')
     context_object_name = 'vario'
     template_name = 'AppProyecto/variosEdicion.html'
-
+def about(request):
+    return render(request, 'AppProyecto/acercaDeMi.html', {})
 
 
 
